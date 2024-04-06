@@ -56,7 +56,7 @@ graph = graphviz.Source(dot_data)
 
 pydot_graph = pydotplus.graph_from_dot_data(dot_data)
 
-graph.render("хуй", format='png', cleanup=True, view=True)
+graph.render("graph", format='png', cleanup=True, view=True)
 
 graph
 
@@ -146,8 +146,8 @@ for min_samples_leaf in range(1, 10):
 
 fig, axs = plt.subplots(1, 2, figsize=(10, 5))
 
-depth_results_train.index += 2
-depth_results_test.index += 2
+depth_results_train.index += 1
+depth_results_test.index += 1
 
 depth_results_train.plot(ax=axs[0])
 axs[0].set_title('Тренувальна вибірка')
